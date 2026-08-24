@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mariage d'Anna & Quentin</title>
+    
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #f5f7f4;       /* Fond vert très clair et doux */
+            --text-color: #2c352e;     /* Vert très foncé / anthracite */
+            --accent-color: #7d937d;   /* Vert sauge principal */
+            --accent-hover: #617561;   /* Vert sauge plus soutenu pour le survol */
+            --border-color: #d0dad0;   /* Bordure vert sauge clair */
+            --card-bg: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Montserrat', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            max-width: 600px;
+            width: 100%;
+            padding: 55px 35px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.03);
+            position: relative;
+            border-radius: 4px;
+        }
+
+        /* Effet de double cadre élégant */
+        .card::before {
+            content: "";
+            position: absolute;
+            top: 15px;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            border: 1px solid var(--border-color);
+            pointer-events: none;
+        }
+
+        .subtitle {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 15px;
+            color: var(--text-color);
+        }
+
+        .ampersand {
+            font-style: italic;
+            color: var(--accent-color);
+            font-weight: 300;
+        }
+
+        .date {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.4rem;
+            letter-spacing: 1.5px;
+            margin-bottom: 30px;
+            color: #526053;
+        }
+
+        .divider {
+            width: 60px;
+            height: 1px;
+            background-color: var(--accent-color);
+            margin: 0 auto 30px auto;
+            opacity: 0.8;
+        }
+
+        .message {
+            font-size: 0.95rem;
+            line-height: 1.8;
+            color: #4a574b;
+            margin-bottom: 40px;
+            padding: 0 10px;
+        }
+
+        .btn-upload {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 16px 36px;
+            border-radius: 2px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 12px rgba(125, 147, 125, 0.25);
+        }
+
+        .btn-upload:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(125, 147, 125, 0.35);
+        }
+
+        .footer-note {
+            font-size: 0.75rem;
+            color: #839284;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <p class="subtitle">Souvenir de notre mariage</p>
+        
+        <!-- Noms des mariés -->
+        <h1>Anna <span class="ampersand">&</span> Quentin</h1>
+        
+        <!-- Date du mariage -->
+        <p class="date">19 Septembre 2026</p>
+        
+        <div class="divider"></div>
+        
+        <!-- Message personnalisé -->
+        <p class="message">
+            Merci d'avoir partagé ce moment magique à nos côtés.<br>
+            Afin de rassembler tous nos souvenirs, vous pouvez ajouter vos photos et vidéos de la journée directement dans notre album partagé.
+        </p>
+        
+        <!-- REMPLACER LE LIEN CI-DESSOUS PAR VOTRE LIEN GOOGLE DRIVE -->
+        <a href="https://drive.google.com/drive/folders/VOTRE_ID_DE_DOSSIER" target="_blank" class="btn-upload">
+            Déposer vos photos
+        </a>
+        
+        <p class="footer-note">Un compte Google peut être requis pour l'envoi.</p>
+    </div>
+
+</body>
+</html>
